@@ -1,0 +1,41 @@
+{
+  "name": "@username/rxjs-observable-store",
+  "version": "1.0.0",
+  "description": "A light weight state management solution implemented using RxJS.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "rxjs",
+    "observables",
+    "subscription",
+    "store",
+    "state"
+  ],
+  "author": "Stephen Healey",
+  "license": "MIT",
+  "devDependencies": {
+    "rxjs": "^7.5.5",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "rxjs": "^7.5.5",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenhealey86/rxjs-observable-store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stephenhealey86/rxjs-observable-store/issues"
+  },
+  "homepage": "https://github.com/stephenhealey86/rxjs-observable-store#readme"
+}
