@@ -1,6 +1,6 @@
 {
-  "name": "@username/rxjs-observable-store",
-  "version": "1.0.0",
+  "name": "@stephenhealey86/rxjs-observable-store",
+  "version": "1.0.1",
   "description": "A light weight state management solution implemented using RxJS.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
