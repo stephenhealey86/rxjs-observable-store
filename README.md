@@ -16,6 +16,9 @@ npm i @stephenhealey86/rxjs-observable-store
 
 ## Usage
 
+### Overview
+Observable Store has two classes, ObservableStore and SubscriptionsHandler. The SubscriptionsHandler provides a clean and easy way to keep track of subscriptions and handles unsubscribing. ObservableStore allows you to easily create state management objects from interfaces, that when their properties are set their equivalent observable property emits.
+
 ### Creating a store service
 
 #### Interfaces representing our app state
