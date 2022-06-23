@@ -1,4 +1,4 @@
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, combineLatest, map } from 'rxjs';
 export class ObservableStore {
     constructor(initialState) {
         this.storeSubject = {};
@@ -25,6 +25,18 @@ export class ObservableStore {
             acc[key] = val.asObservable();
             return acc;
         }, {});
+    }
+    get combinedState$() {
+        const arr = Object.entries(this.storeSubject);
+        return combineLatest([
+            ...arr.map(([key, value]) => value.asObservable())
+        ])
+            .pipe(map(next => {
+            return arr.reduce((acc, [key, value], index) => {
+                acc[key] = next[index];
+                return acc;
+            }, {});
+        }));
     }
     complete() {
         Object.values(this.storeSubject).forEach((val) => { val.complete(); });

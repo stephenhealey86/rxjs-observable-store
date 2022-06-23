@@ -8,5 +8,6 @@ export declare class ObservableStore<T extends {
     get state$(): {
         [key in keyof T]: Observable<T[key]>;
     };
+    get combinedState$(): Observable<T>;
     complete(): void;
 }
